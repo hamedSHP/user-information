@@ -1,0 +1,29 @@
+{
+    "name": "parax/user-information",
+    "description": "User information",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hamed sh",
+            "email": "megahamed22@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Parax\\User\\Information\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Parax\\User\\Information\\Providers\\UserInformationServiceProvider"
+            ]
+        }
+    },
+    "post-create-project-cmd": [
+        "php -r 'file_exists(\"./../../../app/User.php\") && unlink(\"./../../../app/User.php\");'"
+    ]
+}
