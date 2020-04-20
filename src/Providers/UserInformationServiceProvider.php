@@ -15,8 +15,8 @@ class UserInformationServiceProvider extends ServiceProvider
         ], 'migrations');
 
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('/config')
-        ], 'parax');
+            __DIR__.'/../Config/config.php' => config_path('parax.php')
+        ], 'config');
     }
 
     public function boot()
